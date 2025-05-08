@@ -26,6 +26,7 @@ slicesLeft = totalSlices - slicesPerperson;
 
 console.log("Slices left over: " + slicesLeft);
     }
+    </script>
 <button onclick="Pizza_Calculator()">Calculate Pizza Slices Per Person</button>
     <p id="result"></p>
 </div>
