@@ -31,3 +31,5 @@ slicesLeft = totalSlices - slicesPerperson;
     <p id="result"></p>
 </div>
 ### Fun:
+
+[Axalotle Go!](https://flowlab.io/games/play/2381148)
