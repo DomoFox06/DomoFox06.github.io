@@ -6,6 +6,10 @@
 
 
 ### Practical:
+<div style="text-align: center; margin-top: 20px;">
+    <button onclick="showPizzaBox()">Scroll Down to Start</button>
+</div>
+
 <div id="pizza-box" style="border: 1px solid #ccc; padding: 15px; width: 300px;">
     <label>Amount of people:</label><br>
     <input type="number" id="people"><br><br>
