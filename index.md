@@ -6,17 +6,19 @@
 
 
 ### Practical:
+<div>
+
 <script>
     function Pizza_Calculator(){
-        let people, pizza, slices, totalSlices, slicesPerperson, slicesLeft;
+let people, pizza, slices, totalSlices, slicesPerperson, slicesLeft;
 
-("Amount of people: ");
+console.log("Amount of people: ");
 people = parseInt(prompt());
 
-("Amount of boxes of pizzas: ");
+console.log("Amount of boxes of pizzas: ");
 pizza = parseInt(prompt());
 
-("Slices Per Pizza: ");
+console.log("Slices Per Pizza: ");
 slices = parseInt(prompt());
 
 totalSlices = pizza * slices;
@@ -24,12 +26,14 @@ totalSlices = pizza * slices;
 slicesPerperson = 3 * people;
 slicesLeft = totalSlices - slicesPerperson;
 
-("Slices left over: " + slicesLeft);
-    }
-    </script>
-<button onclick="Pizza_Calculator()">Calculate Pizza Slices Per Person</button>
-    <p id="result"></p>
+console.log("Slices left over: " + slicesLeft);
+}
+<script>
+
+<button onclick="Pizza_Calculator()">Calculate Pizza</button>
+
 </div>
+
 ### Fun:
 
 [Axalotle Go!](https://flowlab.io/games/play/2381148)
