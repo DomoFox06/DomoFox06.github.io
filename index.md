@@ -8,7 +8,7 @@
 ### Practical:<!-- Toggle Scroll Button -->
 <!-- Toggle Scroll Button -->
 <div style="text-align: center; margin-top: 20px;">
-    <button id="scroll-btn" onclick="togglePizzaBox()">Scroll Down to Start</button>
+    <button id="scroll-btn" onclick="togglePizzaBox()">Pizza Calculator 🍕</button>
 </div>
 
 <!-- Pizza Calculator Box (initially hidden) -->
@@ -45,7 +45,7 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
             setTimeout(() => {
                 pizzaBox.style.display = "none";
-                scrollBtn.innerText = "Scroll Down to Start";
+                scrollBtn.innerText = "Pizza Calculator 🍕";
             }, 600); // Delay to let scroll finish before hiding
         }
 
