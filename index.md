@@ -6,11 +6,13 @@
 
 
 ### Practical:
+<!-- Scroll Down Button -->
 <div style="text-align: center; margin-top: 20px;">
     <button onclick="showPizzaBox()">Scroll Down to Start</button>
 </div>
 
-<div id="pizza-box" style="border: 1px solid #ccc; padding: 15px; width: 300px;">
+<!-- Hidden Pizza Calculator Box -->
+<div id="pizza-box" style="display: none; border: 1px solid #ccc; padding: 15px; width: 300px; margin-top: 20px;">
     <label>Amount of people:</label><br>
     <input type="number" id="people"><br><br>
 
@@ -29,6 +31,11 @@
 </div>
 
 <script>
+    function showPizzaBox() {
+        document.getElementById("pizza-box").style.display = "block";
+        document.getElementById("pizza-box").scrollIntoView({ behavior: "smooth" });
+    }
+
     function Pizza_Calculator() {
         let people = parseInt(document.getElementById("people").value);
         let pizza = parseInt(document.getElementById("pizza").value);
