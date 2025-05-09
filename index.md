@@ -5,13 +5,12 @@
 # Here you will find some of the things I have made
 
 
-### Practical:
-<!-- Scroll Down Button -->
+### Practical:<!-- Toggle Scroll Button -->
 <div style="text-align: center; margin-top: 20px;">
-    <button onclick="showPizzaBox()">Scroll Down to Start</button>
+    <button id="scroll-btn" onclick="togglePizzaBox()">Scroll Down to Start</button>
 </div>
 
-<!-- Hidden Pizza Calculator Box -->
+<!-- Pizza Calculator Box (initially hidden) -->
 <div id="pizza-box" style="display: none; border: 1px solid #ccc; padding: 15px; width: 300px; margin-top: 20px;">
     <label>Amount of people:</label><br>
     <input type="number" id="people"><br><br>
@@ -31,33 +30,16 @@
 </div>
 
 <script>
-    function showPizzaBox() {
-        document.getElementById("pizza-box").style.display = "block";
-        document.getElementById("pizza-box").scrollIntoView({ behavior: "smooth" });
-    }
+    let pizzaBoxVisible = false;
 
-    function Pizza_Calculator() {
-        let people = parseInt(document.getElementById("people").value);
-        let pizza = parseInt(document.getElementById("pizza").value);
-        let slices = parseInt(document.getElementById("slices").value);
-        let spp = parseInt(document.getElementById("spp").value);
+    function togglePizzaBox() {
+        const pizzaBox = document.getElementById("pizza-box");
+        const scrollBtn = document.getElementById("scroll-btn");
 
-        let totalSlices = pizza * slices;
-        let totalNeeded = people * spp;
-        let slicesLeft = totalSlices - totalNeeded;
+        if (!pizzaBoxVisible) {
+            pizzaBox.style.display = "block";
+            pizzaBox.scrollInto
 
-        const resultBox = document.getElementById("result");
-        resultBox.innerHTML = `
-            <strong>Pizza Calculation Summary:</strong><br><br>
-            People: ${people}<br>
-            Boxes of Pizza: ${pizza}<br>
-            Slices per Pizza: ${slices}<br>
-            Total Slices: ${totalSlices}<br>
-            Slices Needed (${spp} per person): ${totalNeeded}<br>
-            <strong>Slices Left Over: ${slicesLeft}</strong>
-        `;
-    }
-</script>
 
 ### Fun:
 
