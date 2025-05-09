@@ -7,32 +7,26 @@
 
 ### Practical:
 <div>
-
-<script>
-    function Pizza_Calculator(){
-let people, pizza, slices, totalSlices, slicesPerperson, slicesLeft;
-
-console.log("Amount of people: ");
-people = parseInt(prompt());
-
-console.log("Amount of boxes of pizzas: ");
-pizza = parseInt(prompt());
-
-console.log("Slices Per Pizza: ");
-slices = parseInt(prompt());
-
-totalSlices = pizza * slices;
-
-slicesPerperson = 3 * people;
-slicesLeft = totalSlices - slicesPerperson;
-
-console.log("Slices left over: " + slicesLeft);
-}
-<script>
-
-<button onclick="Pizza_Calculator()">Calculate Pizza</button>
-
+    <button onclick="Pizza_Calculator()">Calculate Pizza</button>
 </div>
+
+<script>
+    function Pizza_Calculator() {
+        let people = parseInt(prompt("Amount of people:"));
+        let pizza = parseInt(prompt("Amount of boxes of pizzas:"));
+        let slices = parseInt(prompt("Slices Per Pizza:"));
+
+        let totalSlices = pizza * slices;
+        let slicesPerperson = 3 * people;
+        let slicesLeft = totalSlices - slicesPerperson;
+
+        // Show in console
+        console.log("Slices left over: " + slicesLeft);
+
+        // Also show in the page
+        document.body.innerHTML += "<p>Slices left over: " + slicesLeft + "</p>";
+    }
+</script>
 
 ### Fun:
 
