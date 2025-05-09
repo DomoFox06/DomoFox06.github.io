@@ -6,6 +6,7 @@
 
 
 ### Practical:<!-- Toggle Scroll Button -->
+<!-- Toggle Scroll Button -->
 <div style="text-align: center; margin-top: 20px;">
     <button id="scroll-btn" onclick="togglePizzaBox()">Scroll Down to Start</button>
 </div>
@@ -38,7 +39,41 @@
 
         if (!pizzaBoxVisible) {
             pizzaBox.style.display = "block";
-            pizzaBox.scrollInto
+            pizzaBox.scrollIntoView({ behavior: "smooth" });
+            scrollBtn.innerText = "Scroll Back Up";
+        } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setTimeout(() => {
+                pizzaBox.style.display = "none";
+                scrollBtn.innerText = "Scroll Down to Start";
+            }, 600); // Delay to let scroll finish before hiding
+        }
+
+        pizzaBoxVisible = !pizzaBoxVisible;
+    }
+
+    function Pizza_Calculator() {
+        let people = parseInt(document.getElementById("people").value);
+        let pizza = parseInt(document.getElementById("pizza").value);
+        let slices = parseInt(document.getElementById("slices").value);
+        let spp = parseInt(document.getElementById("spp").value);
+
+        let totalSlices = pizza * slices;
+        let totalNeeded = people * spp;
+        let slicesLeft = totalSlices - totalNeeded;
+
+        const resultBox = document.getElementById("result");
+        resultBox.innerHTML = `
+            <strong>Pizza Calculation Summary:</strong><br><br>
+            People: ${people}<br>
+            Boxes of Pizza: ${pizza}<br>
+            Slices per Pizza: ${slices}<br>
+            Total Slices: ${totalSlices}<br>
+            Slices Needed (${spp} per person): ${totalNeeded}<br>
+            <strong>Slices Left Over: ${slicesLeft}</strong>
+        `;
+    }
+</script>
 
 
 ### Fun:
