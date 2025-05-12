@@ -75,8 +75,9 @@
     }
 </script>
 
-[2-Player Board Game!](https://github.com/DomoFox06/CSC134/blob/main/Module_7/Final_Project.cpp)
-
 ### Fun:
 
 [Axalotle Go!](https://flowlab.io/games/play/2381148)
+
+[2-Player Board Game!](https://github.com/DomoFox06/CSC134/blob/main/Module_7/Final_Project.cpp)
+
